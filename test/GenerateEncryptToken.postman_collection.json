@@ -1,0 +1,71 @@
+{
+	"info": {
+		"_postman_id": "4675734a-3ccd-4803-b333-c0462a0b3a00",
+		"name": "GenerateEncryptToken",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "DEV Token Registrar Usuario",
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"exec": [
+							"const moment = require('moment');\r",
+							"const timestamp = moment().format(\"YYYY-MM-DDTHH:mm:ss\");\r",
+							"pm.environment.set(\"timestamp\", timestamp);"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "transaction_id",
+						"type": "text",
+						"value": "{{$randomInt}}{{$randomInt}}{{$randomInt}}{{$randomInt}}"
+					},
+					{
+						"key": "timestamp",
+						"type": "text",
+						"value": "{{timestamp}}"
+					},
+					{
+						"key": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					},
+					{
+						"key": "channel_id",
+						"type": "text",
+						"value": "11"
+					},
+					{
+						"key": "accept",
+						"type": "text",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"data\": {\r\n        \"token\": {\r\n            \"payload\": {\r\n                \"email\": \"test@gmail.com\",\r\n                \"password\": \"test123\",\r\n                \"nickname\": \"test user\",\r\n                \"age\": 24,\r\n                \"phone\": \"966206918\"\r\n            }\r\n        }\r\n    }\r\n}"
+				},
+				"url": {
+					"raw": "localhost:8082/token/encrypt",
+					"host": [
+						"localhost"
+					],
+					"port": "8082",
+					"path": [
+						"token",
+						"encrypt"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
