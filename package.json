@@ -1,5 +1,5 @@
 {
-    "name": "GenerateEncryptToken",
+    "name": "generate-encrypt-token",
     "version": "1.0.0",
     "description": "Microservicio para generar y encriptar token",
     "main": "app.js",
@@ -17,5 +17,9 @@
         "jose": "^2.0.3",
         "jsonwebtoken": "^8.5.1",
         "log4js": "^6.3.0"
+    },
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/DoNDinho/ms-GenerateEncryptToken"
     }
 }

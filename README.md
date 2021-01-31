@@ -1,10 +1,42 @@
 # GenerateEncryptToken
 
-Ejecutar >>> npm install
+_Microservicio para generar y encriptar token_
 
-Crear un archivo .env con las siguientes variables:
+## Herramientas necesarias 🛠️
 
-PORT=<puerto>
-FIRMATOKENJWT=<firma_token_jwt>
-DURACIONTOKENJWT=<duracion_token_jwt>
-FIRMATOKENJWE=<firma_token_jwe>
+-   [NPM](https://www.npmjs.com/) - Sistema gestión paquetes Node
+-   [Node JS Version 12](https://nodejs.org/en/blog/release/v12.13.0/) - Runtime Multiplataforma
+-   [Postman](https://www.postman.com/) - Cliente para peticiones HTTP
+
+### Instalación 🔧
+
+_Para instalar dependencias ejecute el siguiente comando_
+
+```
+$ npm install
+```
+
+_Crea un archivo .env con las siguientes variables:_
+
+-   `PORT`: Puerto del servidor
+-   `FIRMATOKENJWT`: Firma del token JWT
+-   `DURACIONTOKENJWT`: Duración del token JWT
+-   `FIRMATOKENJWE`: Firma del token JWE
+
+_Ejecuta el servidor:_
+
+```
+$ npm start
+```
+
+## Ejecutando la aplicación ⚙️
+
+_Para ejecutar la aplicación importe la colección y entorno en postman ubicado en la carpeta [test](https://github.com/DoNDinho/ms-GenerateEncryptToken/tree/main/test)_
+
+## Autor ✒️
+
+-   **Diego Flores** - Desarrollador [DoNDinho](https://github.com/DoNDinho)
+
+---
+
+⌨️ con ❤️ por [DoNDinho](https://github.com/DoNDinho) 😊
